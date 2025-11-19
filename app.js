@@ -5,6 +5,7 @@ let started=false;
 let level=0;
 let highScore=0;
 let h2=document.querySelector("h2");
+let background="light";
 document.addEventListener("keypress", function(){
     if(started==false){
         console.log("Game Started");
@@ -20,7 +21,7 @@ function btnFlash(btn){
     }, 200);
 };
 let score=document.querySelector(".score");
-
+let body=document.querySelector("body");
 // h2.append(score);
 // let score=h2.innerHTML=`High Score = <b>${highScore}</b>`;
 // h2.insertAdjacentElement("afterend", "score");
@@ -34,10 +35,14 @@ function checkAns(idx){
         
         h2.insertAdjacentElement("afterend", score);
         h2.innerHTML=`Game Over! Your score is <b>${level}</b> <br> Press any key to start`;
-        let body=document.querySelector("body");
+        
         body.style.backgroundColor="red";
         setTimeout(function (){
-            body.style.backgroundColor="white";
+            if(background==="light"){
+                body.style.backgroundColor="white";
+            } else{
+                body.style.backgroundColor="#25232A";
+            }
         }, 100);
         
         reset();
@@ -55,9 +60,6 @@ function levelUp(){
     let randomIdx=Math.floor(Math.random()*4);
     let randColor=btns[randomIdx];
     let randBtn=document.querySelector(`.${randColor}`);
-    // console.log(randomIdx);
-    // console.log(randColor);
-   // console.log(randBtn);
     gameSeq.push(randColor);
     console.log(gameSeq);
     btnFlash(randBtn);
@@ -82,3 +84,23 @@ function reset(){
     level=0;
     started=false;
 }
+
+
+let mode=document.querySelector("#mode");
+
+
+mode.addEventListener("click", function(){
+    if(background==="light"){
+        body.style.backgroundColor="#25232A";
+        body.style.color="white";
+        mode.setAttribute("id", "white");
+        mode.innerText="Light";
+        background="dark";
+    } else{
+        body.style.backgroundColor="#ffffffff";
+        body.style.color="black";
+        mode.setAttribute("id", "white");
+        mode.innerText="Dark";
+        background="light";
+    }
+});
