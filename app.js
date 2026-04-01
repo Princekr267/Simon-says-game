@@ -4,16 +4,25 @@ let btns=["red", "blue", "green", "yellow"];
 let started=false;
 let level=0;
 let highScore=0;
-let h2=document.querySelector("h2");
+let h2=document.querySelector("#instruction");
 let background="light";
-document.addEventListener("keypress", function(){
+let startBtn=document.querySelector("#startBtn");
+
+// Function to start the game
+function startGame() {
     if(started==false){
         console.log("Game Started");
         started=true;
-        
+        startBtn.style.display="none";
         levelUp();
-    };
-});
+    }
+}
+
+// Desktop: Start game with keypress
+document.addEventListener("keypress", startGame);
+
+// Mobile: Start game with button click
+startBtn.addEventListener("click", startGame);
 function btnFlash(btn){
     btn.classList.add("flash");
     setTimeout(function(){
@@ -34,7 +43,11 @@ function checkAns(idx){
     } else{
         
         h2.insertAdjacentElement("afterend", score);
-        h2.innerHTML=`Game Over! Your score is <b>${level}</b> <br> Press any key to start`;
+        if(window.innerWidth <= 1024) {
+            h2.innerHTML=`Game Over! Your score is <b>${level}</b> <br> Click START GAME`;
+        } else {
+            h2.innerHTML=`Game Over! Your score is <b>${level}</b> <br> Press any key to start`;
+        }
         
         body.style.backgroundColor="red";
         setTimeout(function (){
@@ -83,6 +96,10 @@ function reset(){
     gameSeq=[];
     level=0;
     started=false;
+    // Show start button again on mobile and tablets
+    if(window.innerWidth <= 1024) {
+        startBtn.style.display="block";
+    }
 }
 
 
