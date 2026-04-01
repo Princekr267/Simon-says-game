@@ -2,7 +2,7 @@
 
 > A classic memory game built with vanilla JavaScript - Test your memory and reflexes!
 
-![Game Banner](<img width="1919" height="915" alt="Screenshot 2025-11-18 212537" src="https://github.com/user-attachments/assets/16060d07-e3d7-4eca-a592-d13a1dac9d2d" />)
+![Game Banner](https://github.com/Princekr267/Simon-says-game/blob/main/Screenshots/Screenshot%202025-11-18%20212537.png?raw=true)
 *Main game interface*
 
 ---
@@ -92,25 +92,25 @@ simon-says-game/
 ## 📸 Screenshots
 
 ### Game Start Screen
-![Start Screen](<img width="1919" height="915" alt="Screenshot 2025-11-18 212537" src="https://github.com/user-attachments/assets/b573890c-d2ba-4a95-8ca3-9a3da5ff5336" />)
+![Start Screen](https://github.com/Princekr267/Simon-says-game/blob/main/Screenshots/Screenshot%202025-11-18%20212537.png?raw=true)
 *Press any key to begin your challenge*
 
 ---
 
 ### Gameplay
-![Gameplay](<img width="1919" height="917" alt="Screenshot 2025-11-18 212631" src="https://github.com/user-attachments/assets/e0d205a9-19a4-4e78-96e8-f48d894c7138" />)
+![Gameplay](https://github.com/Princekr267/Simon-says-game/blob/main/Screenshots/Screenshot%202025-11-18%20212631.png?raw=true)
 *Following the color sequence*
 
 ---
 
 ### Score Display
-![Score Tracking](<img width="1919" height="910" alt="Screenshot 2025-11-18 213321" src="https://github.com/user-attachments/assets/75b12580-2abd-4b0e-b409-a7a8e64b0526" />)
+![Score Tracking](https://github.com/Princekr267/Simon-says-game/blob/main/Screenshots/Screenshot%202025-11-18%20212700.png?raw=true)
 *Current score and high score tracking*
 
 ---
 
 ### Game Over
-![Game Over](<img width="1919" height="911" alt="Screenshot 2025-11-18 212700" src="https://github.com/user-attachments/assets/544c2d3b-d343-4e1a-b31f-a428f634964e" />)
+![Game Over](https://github.com/Princekr267/Simon-says-game/blob/main/Screenshots/Screenshot%202025-11-18%20213321.png?raw=true)
 *Red flash indicates game over*
 
 ---
